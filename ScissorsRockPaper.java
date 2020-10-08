@@ -20,23 +20,34 @@ public class ScissorsRockPaper {
 
             if (computer == 0) {
                 switch (person) {
-                    case 1 : personWin++;
-                    break;
-                    case 2 : computerWin++;
-                    break;
+                case 0 : System.out.println("The computer is scissor. You are scissor. It is a draw.");
+                break;
+                case 1 : System.out.println("The computer is scissor. You are rock. You won.");
+                personWin++;
+                break;
+                case 2 : System.out.println("The computer is scissor. You are paper. You lose.");
+                computerWin++;
+                break;
                 }
             } else if (computer == 1) {
                 switch (person) {
-                    case 0 : computerWin++;
+                    case 0 : System.out.println("The computer is rock. You are scissor. You lost.");
+                    computerWin++;
                     break;
-                    case 2 : personWin++;
+                    case 1 : System.out.println("The computer is rock. You are rock. It is a draw");
+                    break;
+                    case 2 : System.out.println("The computer is rock. You are paper. You won.");
+                    personWin++;
                 }
             } else {
                 switch (person) {
-                    case 0 : personWin++;
+                    case 0 : System.out.println("The computer is paper. You are scissor. You won.");
+                    personWin++;
                     break;
-                    case 1 : computerWin++;
+                    case 1 : System.out.println("The computer is paper. You are rock. You lost");
+                    computerWin++;
                     break;
+                    case 2 : System.out.println("The computer is paper. You are paper. It is a draw.");
                 }
             }
 
